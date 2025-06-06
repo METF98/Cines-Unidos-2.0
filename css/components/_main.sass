@@ -1,0 +1,43 @@
+$color-principal: red
+$color-secundario: white
+$color-alternativo: black
+$color-fondo: brow
+
+*
+  margin: 0
+  padding: 0
+  font-family: "Arvo", serif
+
+main
+  @include flex(column,center,center,20px)
+  header
+    height: 500px
+    min-height: 500px
+    width: 100%
+    overflow: hidden
+    position: relative
+    @include espaciado(10px 30px,-100px 0 0 0)
+    background: transparent
+    video
+      display: block
+      position: absolute
+      top: -100px
+      width: 100%
+      height: 150%
+      object-fit: contain
+      object-position: center
+      filter: brightness(0.2)
+      background: $color-alternativo
+      z-index: -1
+    .container-header
+      width: 100%
+      height: 100%
+      @include flex(row,left,end,0)
+      @include espaciado(0 30px,0)
+      .destacado
+        @include flex(row,left,center,0)
+        img
+          @include espaciado(10px 20px,0)
+
+
+

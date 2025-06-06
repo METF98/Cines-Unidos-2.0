@@ -1,0 +1,20 @@
+
+@mixin flex($dir,$just,$alig,$gp:0)
+  display: flex
+  flex-direction: $dir
+  justify-content: $just
+  align-items: $alig
+  gap: $gp
+
+@mixin gri($diferentes,$columnas,$gp,$alineacion:auto)
+  display: grid
+  @if $diferentes == true
+    grid-template-columns: $columnas
+  @else
+    grid-template-columns: repeat($columnas,1fr)
+  gap:$gp
+  align-items: $alineacion
+
+@mixin espaciado($padding:0,$margin:0)
+  padding: $padding
+  margin: $margin
