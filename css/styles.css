@@ -5,58 +5,132 @@
   font-family: "Arvo", serif;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+body {
+  background: rgba(22, 19, 18, 0.95);
 }
-main header {
-  height: 500px;
-  min-height: 500px;
-  width: 100%;
-  overflow: hidden;
+body main header {
   position: relative;
-  padding: 10px 30px;
-  margin: -100px 0 0 0;
-  background: transparent;
-}
-main header video {
-  display: block;
-  position: absolute;
-  top: -100px;
   width: 100%;
-  height: 150%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-  filter: brightness(0.2);
-  background: black;
-  z-index: -1;
+  height: 530px;
+  min-height: 530px;
+  border-color: rgb(68, 62, 59);
+  border-radius: 16px;
 }
-main header .container-header {
-  width: 100%;
+body main header .container-header {
   height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: left;
-  align-items: end;
+  align-items: center;
   gap: 0;
-  padding: 0 30px;
+}
+body main header .container-header .fondo-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+body main header .container-header .fondo-header .banner-header {
+  display: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  border-radius: 16px;
+  filter: brightness(0.3);
+}
+body main header .container-header .fondo-header .banner-header-responsive {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  aspect-ratio: 1080/1350;
+  border-radius: 16px;
+  filter: brightness(0.3);
+}
+body main header .container-header .texto-header {
+  height: 90%;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 0;
+  padding: 20px;
   margin: 0;
 }
-main header .container-header .destacado {
+body main header .container-header .texto-header .container-texto {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  gap: 0;
+}
+body main header .container-header .texto-header .container-texto .pelicula-destacada {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: rgb(241, 86, 39);
+}
+body main header .container-header .texto-header .container-texto .pelicula-destacada h3 {
+  font-size: 14px;
+}
+body main header .container-header .texto-header .container-texto .pelicula-destacada i {
+  padding: 0 0 5px 0;
+  margin: 0;
+  font-size: 14px;
+}
+body main header .container-header .texto-header .container-texto .title-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 25px;
+}
+body main header .container-header .texto-header .container-texto .title-header h1 {
+  font-size: 48px;
+  color: rgb(248, 250, 252);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 5px;
+}
+body main header .container-header .texto-header .container-texto .title-header h1 span {
+  background: linear-gradient(135deg, rgb(241, 86, 39), rgb(184, 46, 92));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+body main header .container-header .texto-header .container-texto .title-header h2 {
+  color: rgba(209, 213, 219, 0.9);
+  font-size: 20px;
+}
+body main header .container-header .texto-header .container-texto .title-header p {
+  font-size: 18px;
+  color: rgba(209, 213, 219, 0.9);
+}
+body main header .container-header .texto-header .container-texto .title-header .detalles-destacado {
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
-  gap: 0;
+  gap: 10px;
+  color: rgba(209, 213, 219, 0.9);
 }
-main header .container-header .destacado img {
-  padding: 10px 20px;
-  margin: 0;
+body main header .container-header .texto-header .container-texto .title-header .detalles-destacado:first {
+  background: rgb(241, 86, 39);
 }
 
 nav {
@@ -64,67 +138,81 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 30px;
+  padding: 0 24px;
   margin: 0;
+  background: rgba(22, 19, 18, 0.95);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
   position: sticky;
   top: 0;
   z-index: 99;
+  border-bottom: 1px solid rgb(68, 62, 59);
 }
-nav div {
+nav div a {
+  text-decoration: none;
+  color: rgb(184, 46, 92);
+}
+
+.izquierda-nav {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 10px;
-  padding: 5px 10px;
+  gap: 5px;
+  padding: 10px 0 5px 0;
   margin: 0;
 }
-nav div a {
-  text-decoration: none;
-  color: white;
+.izquierda-nav .logo {
+  width: 40px;
+}
+.izquierda-nav .texto-nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 5px;
+  padding: 0 0 2px 0;
+  margin: 0;
+}
+.izquierda-nav .texto-nav h1 {
+  background: linear-gradient(135deg, rgb(241, 86, 39), rgb(184, 46, 92));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+          background-clip: text;
+  font-size: 20px;
+}
+.izquierda-nav .texto-nav p {
+  color: rgb(148, 163, 184);
+  font-size: 12px;
+  display: none;
 }
 
-.izquierda-nav {
-  gap: 20px;
-}
-.izquierda-nav .logo {
-  width: 80px;
-}
-.izquierda-nav .lupa {
-  width: 25px;
-}
-.izquierda-nav select {
-  border: none;
-  outline: none;
-  text-align: center;
-  font-size: 16px;
-  background-color: transparent;
-  color: white;
-}
-.izquierda-nav select option {
-  font-size: 13px;
-  background-color: transparent;
-  border: none;
-  color: black;
+.centro-nav {
+  display: none;
 }
 
 .derecha-nav {
-  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
 }
-.derecha-nav select {
-  width: 180px;
-  border: none;
-  outline: none;
-  text-align: center;
-  font-size: 16px;
-  background-color: transparent;
-  color: white;
+.derecha-nav .btn-inicio-sesion {
+  color: rgba(22, 19, 18, 0.95);
+  background: linear-gradient(135deg, rgb(241, 86, 39), rgb(184, 46, 92));
+  border-style: none;
+  border-radius: 10px;
+  font-size: 14px;
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  margin: 0;
 }
-.derecha-nav select option {
-  background-color: transparent;
-  border: none;
-  color: black;
-}
-.derecha-nav img {
-  width: 30px;
+.derecha-nav .fa-bars {
+  color: rgb(148, 163, 184);
+  cursor: pointer;
 }/*# sourceMappingURL=styles.css.map */

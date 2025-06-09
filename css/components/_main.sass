@@ -1,5 +1,13 @@
-$color-principal: red
-$color-secundario: white
+$color-principal: rgb(241, 86, 39)
+$color-secundario: rgb(184, 46, 92)
+$degradado-principal: linear-gradient(135deg,$color-principal,$color-secundario)
+$background:rgba(22, 19, 18, 0.95 )
+$texto:rgb(248, 250, 252)
+$texto-alternativo: rgb(148, 163, 184)
+$subtitle:rgba(209, 213,219,0.90)
+$cartas:rgb(35, 29, 26)
+$borde:rgb(68, 62, 59)
+$filter-blur: 12px
 $color-alternativo: black
 $color-fondo: brow
 
@@ -8,36 +16,83 @@ $color-fondo: brow
   padding: 0
   font-family: "Arvo", serif
 
-main
-  @include flex(column,center,center,20px)
-  header
-    height: 500px
-    min-height: 500px
-    width: 100%
-    overflow: hidden
-    position: relative
-    @include espaciado(10px 30px,-100px 0 0 0)
-    background: transparent
-    video
-      display: block
-      position: absolute
-      top: -100px
+body
+  background: $background
+  main
+    @include flex(column,center,center,20px)
+    header
+      @include flex(row,center,center,0)
+      position: relative
       width: 100%
-      height: 150%
-      object-fit: contain
-      object-position: center
-      filter: brightness(0.2)
-      background: $color-alternativo
-      z-index: -1
-    .container-header
-      width: 100%
-      height: 100%
-      @include flex(row,left,end,0)
-      @include espaciado(0 30px,0)
-      .destacado
-        @include flex(row,left,center,0)
-        img
-          @include espaciado(10px 20px,0)
+      height: 530px
+      min-height: 530px
+      border-color: $borde
+      border-radius: 16px
+      .container-header
+        height: 100%
+        @include flex(null,row,left,center,0)
+        .fondo-header
+          position: absolute
+          top: 0
+          left: 0
+          right: 0
+          bottom: 0
+          .banner-header
+            display: none
+            @include img-position()
+            width: 100%
+            height: 100%
+            max-width: 100%
+            border-radius: 16px
+            filter: brightness(0.3)
+          .banner-header-responsive
+            @include img-position()
+            width: 100%
+            height: 100%
+            max-width: 100%
+            aspect-ratio: 1080/1350
+            border-radius: 16px
+            filter: brightness(0.3)
+        .texto-header
+          height: 90%
+          position: relative
+          z-index: 10
+          @include flex(null,column,start,start,0)
+          @include espaciado(20px,0)
+          .container-texto
+            height: 100%
+            @include flex(null,column,space-around,start,0)
+            .pelicula-destacada
+              @include flex(null,row,center,center,10px)
+              color:$color-principal
+              h3
+                font-size: 14px
+              i
+                @include espaciado(0 0 5px 0,0)
+                font-size: 14px
+            .title-header
+              @include flex(null,column,center,start,25px)
+              h1
+                font-size: 48px
+                color: $texto
+                @include flex(null,column,center,left,5px)
+                span
+                  @include degradado-principal()
+              h2
+                color: $subtitle
+                font-size: 20px
+              p
+                font-size: 18px
+                color: $subtitle
+              .detalles-destacado
+                @include flex(null,row,left,center,10px)
+                color: $subtitle
+              .detalles-destacado:first
+                background: $color-principal
+
+
+
+
 
 
 

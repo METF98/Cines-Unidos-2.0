@@ -3,15 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" type="image/x-icon" href="./img/logo-white.png">
+  <link rel="shortcut icon" type="image/x-icon" href="https://www.cinesunidos.com/logo/logo.png">
   <title>CINES UNIDOS</title>
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <nav>
     <div class="izquierda-nav">
-      <img class="logo" src="./img/logo-white.png"  alt="">
-      <div>
+      <a href="">
+        <img class="logo" src="https://www.cinesunidos.com/logo/logo.png"  alt="">
+      </a>
+      <div class="texto-nav">
+        <h1>CINES UNIDOS</h1>
+        <P>Puerto La Cruz</P>
+      </div>
+    </div>
+    <div class="centro-nav">
+      <div class="enlaces-centrales">
         <a href="">
           <p>Cartelera</p>
         </a>
@@ -51,30 +60,50 @@
           </option>
         </select>
       </div>
-      <img class="lupa" src="./img/icons/lupa.svg" alt="">
     </div>
     <div class="derecha-nav">
-      <select name="" id="">
-        <option disabled selected >Selecciona tu zona</option>
-        <option value="">Caracas</option>
-        <option value="">Barquisimeto</option>
-        <option value="">Maturín</option>
-        <option value="">Maracay</option>
-      </select>
-      <img src="./img/icons/user.svg" alt="">
+      <button class="btn-inicio-sesion">
+        <i class="fa-solid fa-right-to-bracket"></i>
+        <p>Iniciar Sesión</p>
+      </button>
+      <i class="fa-solid fa-bars"></i>
     </div>
   </nav>
   <main>
     <header>
-        <video src="./img/media/Ballerina - Tráiler oficial en español.mp4" muted autoplay></video>
-
       <div class="container-header">
-        <div class="destacado">
-          <img src="./img/picture/destacada.jpg" width="200px" alt="">
-          <div>
-            <h3>Destacada de la semana ⭐</h3>
-            <h1>Bailarina</h1>
-            <div>
+        <div class="fondo-header">
+          <img class="banner-header-responsive" src="https://preview.redd.it/official-poster-for-final-destination-bloodlines-v0-ccqpgflreyge1.jpeg?width=1080&crop=smart&auto=webp&s=211565ab217b23c0457ec02f89fbbcaba3f1d357" alt="" >
+          <img class="banner-header" src="https://stcinesunidoswebshared.blob.core.windows.net/sliders/HO00005476.jpg" alt="">
+        </div>
+        <div class="texto-header">
+          <div class="container-texto">
+            <div class="pelicula-destacada">
+              <i class="fa-solid fa-star"></i>
+              <h3>PELICULA DESTACADA</h3>
+            </div>
+            <div class="title-header">
+              <h1>
+                Destino
+                <span>
+                  Final
+                </span>
+              </h1>
+              <h2>
+                LAZOS DE SANGRE
+              </h2>
+              <p>
+                La muerte es un mal familiar.
+                Una nueva entrega de la saga
+                que te mantendrá al borde de tu asiento.
+              </p>
+              <div class="detalles-destacado">
+                <small>R • Terror</small>
+                <small>110 min</small>
+                <small>2025</small>
+              </div>
+            </div>
+            <div class="botones-header">
               <button>Comprar boletos</button>
               <button>Ver trailer</button>
             </div>

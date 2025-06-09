@@ -1,49 +1,49 @@
 nav
-  @include flex(row,space-between,center,null)
-  @include espaciado(5px 30px,0)
+  @include flex(null,row,space-between,center,null)
+  @include espaciado(0 24px,0)
+  background: $background
+  backdrop-filter: blur($filter-blur)
   position: sticky
   top: 0
   z-index: 99
+  border-bottom: 1px solid $borde
   div
-    @include flex(row,center,center,10px)
-    @include espaciado(5px 10px,0)
     a
       text-decoration: none
       color: $color-secundario
 
+
 .izquierda-nav
-  gap: 20px
+  @include flex(null,row,center,center,5px)
+  @include espaciado(10px 0 5px 0,0)
   .logo
-    width: 80px
-  .lupa
-    width: 25px
-  select
-    border: none
-    outline: none
-    text-align: center
-    font-size: 16px
-    background-color: transparent
-    color: $color-secundario
-    option
-      font-size: 13px
-      background-color: transparent
-      border: none
-      color: $color-alternativo
+    width: 40px
+  .texto-nav
+    @include flex(null,column,center,start,5px)
+    @include espaciado(0 0 2px 0,0)
+    h1
+      @include degradado-principal()
+      font-size: 20px
+    p
+      color:$texto-alternativo
+      font-size: 12px
+      display: none
+
+
+.centro-nav
+  display: none
 
 
 .derecha-nav
-  gap: 20px
-  select
-    width: 180px
-    border: none
-    outline: none
-    text-align: center
-    font-size: 16px
-    background-color: transparent
-    color: $color-secundario
-    option
-      background-color: transparent
-      border: none
-      color: $color-alternativo
-  img
-    width: 30px
+  @include flex(null,row,center,center,16px)
+  .btn-inicio-sesion
+    color: $background
+    background: $degradado-principal
+    border-style: none
+    border-radius: 10px
+    font-size: 14px
+    @include flex(none,row,center,center,8px)
+    @include espaciado(12px 16px,0)
+  .fa-bars
+    color: $texto-alternativo
+    cursor: pointer
