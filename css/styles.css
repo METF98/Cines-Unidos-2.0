@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,7 @@
 
 body {
   background: rgba(22, 19, 18, 0.95);
+  cursor: default;
 }
 body main header {
   position: relative;
@@ -110,7 +112,7 @@ body main header .container-header .texto-header .container-texto .title-header 
 body main header .container-header .texto-header .container-texto .title-header .fondo-transparente img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 300px;
+  width: 250px;
 }
 body main header .container-header .texto-header .container-texto .title-header p {
   font-size: 18px;
@@ -129,7 +131,7 @@ body main header .container-header .texto-header .container-texto .title-header 
   padding: 5px 15px;
   margin: 0;
   border-radius: 30px;
-  background-color: rgba(241, 86, 39, 0.13);
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.123), rgba(241, 86, 39, 0.233), rgba(0, 0, 0, 0.123));
   color: rgb(241, 86, 39);
 }
 body main header .container-header .texto-header .container-texto .title-header small {
@@ -159,10 +161,14 @@ body main header .container-header .texto-header .container-texto .botones-heade
 body main header .container-header .texto-header .container-texto .botones-header button i {
   font-size: 18px;
 }
-body main header .container-header .texto-header .container-texto .botones-header > button:nth-child(1) {
+body main header .container-header .texto-header .container-texto .botones-header button:hover {
+  filter: brightness(1.5);
+  cursor: pointer;
+}
+body main header .container-header .texto-header .container-texto button:nth-child(1) {
   background: linear-gradient(135deg, rgb(241, 86, 39), rgb(184, 46, 92));
 }
-body main header .container-header .texto-header .container-texto botones-header > button:nth-child(2) {
+body main header .container-header .texto-header .container-texto button:nth-child(2) {
   -webkit-backdrop-filter: blur(15px);
           backdrop-filter: blur(15px);
 }
@@ -237,7 +243,8 @@ nav div a {
   background: linear-gradient(135deg, rgb(241, 86, 39), rgb(184, 46, 92));
   border-style: none;
   border-radius: 10px;
-  font-size: 14px;
+  font-size: 12px;
+  font-weight: 400;
   display: none;
   flex-direction: row;
   justify-content: center;
@@ -246,7 +253,31 @@ nav div a {
   padding: 12px 16px;
   margin: 0;
 }
-.derecha-nav .fa-bars {
+.derecha-nav .fondo-redondo {
   color: rgb(148, 163, 184);
   cursor: pointer;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.derecha-nav .fondo-redondo:hover {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.123), rgba(241, 86, 39, 0.233), rgba(0, 0, 0, 0.123));
+  color: rgb(248, 250, 252);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+
+@media only screen and (min-width: 600px) {
+  .derecha-nav .btn-inicio-sesion {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
 }/*# sourceMappingURL=styles.css.map */

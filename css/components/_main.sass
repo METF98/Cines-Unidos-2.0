@@ -20,6 +20,7 @@ $color-fondo: brow
 
 body
   background: $background
+  cursor: default
   main
     @include flex(column,center,center,20px)
     header
@@ -82,7 +83,7 @@ body
                 border-radius: 30px
                 img
                   object-fit: contain
-                  width: 300px
+                  width: 250px
               p
                 font-size: 18px
                 color: $subtitle
@@ -93,7 +94,7 @@ body
               .detalles-destacado > div
                 @include espaciado (5px 15px,0)
                 border-radius: 30px
-                background-color: rgba(241, 86, 39, 0.130)
+                background: $degradado-secundario
                 color: $color-principal
               small
                 font-size: 14px
@@ -109,9 +110,12 @@ body
                 border: none
                 i
                   font-size: 18px
-            .botones-header > button:nth-child(1)
+                &:hover
+                  filter: brightness(1.5)
+                  cursor: pointer
+            & button:nth-child(1)
               background: $degradado-principal
-            botones-header > button:nth-child(2)
+            & button:nth-child(2)
               backdrop-filter: blur(15px)
 
 

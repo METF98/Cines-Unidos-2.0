@@ -41,9 +41,18 @@ nav
     background: $degradado-principal
     border-style: none
     border-radius: 10px
-    font-size: 14px
+    font-size: 12px
+    font-weight: 400
     @include flex(none,row,center,center,8px)
     @include espaciado(12px 16px,0)
-  .fa-bars
+  .fondo-redondo
     color: $texto-alternativo
     cursor: pointer
+    border-radius: 50%
+    width: 30px
+    height: 30px
+    @include flex(null,column,center, center, 0)
+    &:hover
+      background: $degradado-secundario
+      color: $texto
+      backdrop-filter: blur(15px)
