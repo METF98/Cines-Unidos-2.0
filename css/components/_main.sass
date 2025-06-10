@@ -1,7 +1,9 @@
 $color-principal: rgb(241, 86, 39)
 $color-secundario: rgb(184, 46, 92)
 $degradado-principal: linear-gradient(135deg,$color-principal,$color-secundario)
+$degradado-secundario: linear-gradient(45deg,rgba(0, 0, 0, 0.123),rgba(241, 86, 39, 0.233),rgba(0, 0, 0, 0.123)  )
 $background:rgba(22, 19, 18, 0.95 )
+$background-button:rgba(22, 19, 18, 0.55)
 $texto:rgb(248, 250, 252)
 $texto-alternativo: rgb(148, 163, 184)
 $subtitle:rgba(209, 213,219,0.90)
@@ -52,7 +54,7 @@ body
             max-width: 100%
             aspect-ratio: 1080/1350
             border-radius: 16px
-            filter: brightness(0.3)
+            filter: brightness(0.15)
         .texto-header
           height: 90%
           position: relative
@@ -68,28 +70,49 @@ body
               h3
                 font-size: 14px
               i
-                @include espaciado(0 0 5px 0,0)
-                font-size: 14px
+                @include espaciado(0 0 3px 0,0)
+                font-size: 16px
             .title-header
-              @include flex(null,column,center,start,25px)
-              h1
-                font-size: 48px
-                color: $texto
-                @include flex(null,column,center,left,5px)
-                span
-                  @include degradado-principal()
-              h2
-                color: $subtitle
-                font-size: 20px
+              @include flex(null,column,center,start,50px)
+              .fondo-transparente
+                backdrop-filter: blur(5px)
+                background: $degradado-secundario
+                box-shadow: 0 0 30px 0 rgb(0, 0, 0)
+                @include espaciado(20px,0)
+                border-radius: 30px
+                img
+                  object-fit: contain
+                  width: 300px
               p
                 font-size: 18px
                 color: $subtitle
+                text-wrap: balance
               .detalles-destacado
-                @include flex(null,row,left,center,10px)
+                @include flex(null,row,left,center,40px)
                 color: $subtitle
-              .detalles-destacado:first
-                background: $color-principal
-
+              .detalles-destacado > div
+                @include espaciado (5px 15px,0)
+                border-radius: 30px
+                background-color: rgba(241, 86, 39, 0.130)
+                color: $color-principal
+              small
+                font-size: 14px
+            .botones-header
+              @include flex(null,row,start,center,30px)
+              button
+                @include flex(null,row,center,center,10px)
+                @include espaciado(15px 32px,0)
+                border-radius: 10px
+                font-size: 14px
+                color: $subtitle
+                background: $background-button
+                border: none
+                i
+                  font-size: 18px
+            .botones-header > button:nth-child(1)
+              background: $degradado-principal
+            botones-header > button:nth-child(2)
+              backdrop-filter: blur(15px)
 
 
 
