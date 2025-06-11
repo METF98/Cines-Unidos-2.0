@@ -94,6 +94,28 @@ section
         backdrop-filter: blur(12px)
         border: 1px solid #494949e1
         border-radius: 50px
+      .preventa
+        position: absolute
+        color: $texto
+        font-weight: 700
+        left: 15px
+        top: 20px
+        font-size: 12px
+        @include flex(null,row,left,center,5px)
+        @include espaciado(5px 10px,0)
+        background: $color-secundario
+        border-radius:70px
+      .proximamente
+        position: absolute
+        color: $texto
+        font-weight: 700
+        left: 15px
+        top: 20px
+        font-size: 12px
+        @include flex(null,row,left,center,5px)
+        @include espaciado(5px 10px,0)
+        background: $color-principal
+        border-radius:70px
       .card-texto
         @include espaciado(20px,0)
         @include flex(null,column,center,start,12px)
@@ -105,11 +127,16 @@ section
           color: $texto
           font-size: 18px
           @include transition(0.3)
-        div
+        .horarios
+          @include flex(null,row,left,center,10px)
+          color: $texto
+        .botones
+          @include grid(false,4,5px,center)
+          color: $texto
           @include flex(null,row,left,center,10px)
           color: $texto
           button
-            @include flex(null,column,center,center,16px)
+            @include flex(null,column,center,center,0)
             @include espaciado(10px 12px,0)
             color: $texto
             font-size: 12px
@@ -141,3 +168,4 @@ section
           visibility: visible
         .btn-video
           animation: aparecer 2s ease
+

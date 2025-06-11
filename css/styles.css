@@ -513,6 +513,40 @@ section .section-cards .card .btn-video {
   border: 1px solid rgba(73, 73, 73, 0.8823529412);
   border-radius: 50px;
 }
+section .section-cards .card .preventa {
+  position: absolute;
+  color: rgb(248, 250, 252);
+  font-weight: 700;
+  left: 15px;
+  top: 20px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  margin: 0;
+  background: rgb(184, 46, 92);
+  border-radius: 70px;
+}
+section .section-cards .card .proximamente {
+  position: absolute;
+  color: rgb(248, 250, 252);
+  font-weight: 700;
+  left: 15px;
+  top: 20px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px;
+  margin: 0;
+  background: rgb(241, 86, 39);
+  border-radius: 70px;
+}
 section .section-cards .card .card-texto {
   padding: 20px;
   margin: 0;
@@ -536,7 +570,7 @@ section .section-cards .card .card-texto h3 {
   font-size: 18px;
   transition: 0.3s all ease;
 }
-section .section-cards .card .card-texto div {
+section .section-cards .card .card-texto .horarios {
   display: flex;
   flex-direction: row;
   justify-content: left;
@@ -544,12 +578,25 @@ section .section-cards .card .card-texto div {
   gap: 10px;
   color: rgb(248, 250, 252);
 }
-section .section-cards .card .card-texto div button {
+section .section-cards .card .card-texto .botones {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  align-items: center;
+  color: rgb(248, 250, 252);
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  color: rgb(248, 250, 252);
+}
+section .section-cards .card .card-texto .botones button {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 0;
   padding: 10px 12px;
   margin: 0;
   color: rgb(248, 250, 252);
@@ -560,7 +607,7 @@ section .section-cards .card .card-texto div button {
   transition: 0.3s all ease;
   font-weight: bold;
 }
-section .section-cards .card .card-texto div button:hover {
+section .section-cards .card .card-texto .botones button:hover {
   background: rgb(241, 86, 39);
   color: rgba(22, 19, 18, 0.95);
   cursor: pointer;
@@ -621,6 +668,41 @@ section .section-cards .card:hover .btn-video {
     align-items: center;
     gap: 8px;
   }
+  section .section-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: center;
+  }
+  section .section-cards .card .card-texto {
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+    background: rgb(35, 29, 26);
+  }
+  section .section-cards .card .card-texto p {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+  }
+  section .section-cards .card .card-texto h3 {
+    color: rgb(248, 250, 252);
+    font-size: 18px;
+    transition: 0.3s all ease;
+  }
+  section .section-cards .card .card-texto .botones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+    align-items: center;
+  }
 }
 @media only screen and (min-width: 768px) {
   .container-header .fondo-header .banner-header {
@@ -640,7 +722,23 @@ section .section-cards .card:hover .btn-video {
   }
   section .section-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 992px) {
+  section .section-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  section .section-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     gap: 25px;
     align-items: center;
   }

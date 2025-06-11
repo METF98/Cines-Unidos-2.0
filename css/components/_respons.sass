@@ -8,6 +8,23 @@
     .btn-inicio-sesion
       @include flex(null,row,center,center,8px)
 
+  section
+    .section-cards
+      @include grid(false,2,25px,center)
+      .card
+        .card-texto
+          @include espaciado(20px,0)
+          @include flex(null,column,center,start,12px)
+          background: $background-cartas
+          p
+            @include flex(null,row,left,center,10px)
+            font-size: 13px
+          h3
+            color: $texto
+            font-size: 18px
+            @include transition(0.3)
+          .botones
+            @include grid(false,3,5px,center)
 
 
 
@@ -31,8 +48,13 @@
 
   section
     .section-cards
-      @include grid(false,2,25px,center)
+      @include grid(false,3,25px,center)
 @media only screen and (min-width: 992px)
-
+  section
+    .section-cards
+      @include grid(false,4,25px,center)
 
 @media only screen and (min-width: 1200px)
+  section
+    .section-cards
+      @include grid(false,5,25px,center)
