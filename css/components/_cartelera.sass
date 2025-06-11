@@ -37,6 +37,7 @@ section
           object-position: center
           width: 100%
           max-width: 100%
+          @include transition(1)
         video
           visibility: hidden
           opacity: 0
@@ -49,7 +50,9 @@ section
           object-position: center
           width: 100%
           height: 100%
-          z-index: 999
+          z-index: 10
+          filter: brightness(0.1)
+          @include transition(1)
       .categoria
         position: absolute
         top: 20px
@@ -61,18 +64,36 @@ section
           color: $texto
           font-size: 12px
       .trailer
+        visibility: hidden
         position: absolute
-        left: 10px
-        bottom: 10px
-        font-size: 15px
+        left: 15px
+        bottom: 20px
+        font-size: 12px
         @include flex(null,row,left,center,5px)
-        @include espaciado(10px,0)
+        @include espaciado(5px 10px,0)
+        background: $background-oscuro
+        border-radius:70px
         i
           font-size: 8px
           color: #ff0000
+          animation: parpadeo 1.5s ease infinite
         p
           color: $texto
           font-weight: 500
+      .btn-video
+        width: 60px
+        height: 60px
+        font-size: 60px
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        margin: auto
+        color: #000000e1
+        backdrop-filter: blur(12px)
+        border: 1px solid #494949e1
+        border-radius: 50px
       .card-texto
         @include espaciado(20px,0)
         @include flex(null,column,center,start,12px)
@@ -100,6 +121,7 @@ section
             &:hover
               background: $color-principal
               color: $background
+              cursor: pointer
       &:hover
         border-color: $color-principal
         & h3
@@ -110,6 +132,12 @@ section
           img
             visibility: 0
             opacity: 0
+            filter: brightness(0.1)
           video
             visibility: visible
             opacity: 1
+            filter: brightness(1)
+        .trailer
+          visibility: visible
+        .btn-video
+          animation: aparecer 2s ease

@@ -128,10 +128,11 @@ nav div a {
   display: block;
   font-size: 14px;
 }
-.fondo-redondo:hover {
+.fondo-redondo:hover .popup-nav {
   visibility: visible;
   opacity: 1;
 }
+
 .derecha-nav {
   display: flex;
   flex-direction: row;
@@ -438,6 +439,7 @@ section .section-cards .card .card-img img {
      object-position: center;
   width: 100%;
   max-width: 100%;
+  transition: 1s all ease;
 }
 section .section-cards .card .card-img video {
   visibility: hidden;
@@ -453,7 +455,9 @@ section .section-cards .card .card-img video {
      object-position: center;
   width: 100%;
   height: 100%;
-  z-index: 999;
+  z-index: 10;
+  filter: brightness(0.1);
+  transition: 1s all ease;
 }
 section .section-cards .card .categoria {
   position: absolute;
@@ -469,25 +473,45 @@ section .section-cards .card .categoria p {
   font-size: 12px;
 }
 section .section-cards .card .trailer {
+  visibility: hidden;
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  font-size: 15px;
+  left: 15px;
+  bottom: 20px;
+  font-size: 12px;
   display: flex;
   flex-direction: row;
   justify-content: left;
   align-items: center;
   gap: 5px;
-  padding: 10px;
+  padding: 5px 10px;
   margin: 0;
+  background: rgba(0, 0, 0, 0.702);
+  border-radius: 70px;
 }
 section .section-cards .card .trailer i {
   font-size: 8px;
   color: #ff0000;
+  animation: parpadeo 1.5s ease infinite;
 }
 section .section-cards .card .trailer p {
   color: rgb(248, 250, 252);
   font-weight: 500;
+}
+section .section-cards .card .btn-video {
+  width: 60px;
+  height: 60px;
+  font-size: 60px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  color: rgba(0, 0, 0, 0.8823529412);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+  border: 1px solid rgba(73, 73, 73, 0.8823529412);
+  border-radius: 50px;
 }
 section .section-cards .card .card-texto {
   padding: 20px;
@@ -539,6 +563,7 @@ section .section-cards .card .card-texto div button {
 section .section-cards .card .card-texto div button:hover {
   background: rgb(241, 86, 39);
   color: rgba(22, 19, 18, 0.95);
+  cursor: pointer;
 }
 section .section-cards .card:hover {
   border-color: rgb(241, 86, 39);
@@ -552,12 +577,39 @@ section .section-cards .card:hover .card-img {
 section .section-cards .card:hover .card-img img {
   visibility: 0;
   opacity: 0;
+  filter: brightness(0.1);
 }
 section .section-cards .card:hover .card-img video {
   visibility: visible;
   opacity: 1;
+  filter: brightness(1);
+}
+section .section-cards .card:hover .trailer {
+  visibility: visible;
+}
+section .section-cards .card:hover .btn-video {
+  animation: aparecer 2s ease;
 }
 
+@keyframes parpadeo {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes aparecer {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.5;
+  }
+}
 @media only screen and (min-width: 600px) {
   .izquierda-nav .texto-nav p {
     display: block;
@@ -585,5 +637,11 @@ section .section-cards .card:hover .card-img video {
   }
   .derecha-nav .fondo-redondo {
     display: none;
+  }
+  section .section-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    align-items: center;
   }
 }/*# sourceMappingURL=styles.css.map */
