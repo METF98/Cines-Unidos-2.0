@@ -13,7 +13,7 @@
     align-items: $alig
     gap: $gp
 
-@mixin gri($diferentes,$columnas,$gp,$alineacion:auto)
+@mixin grid($diferentes,$columnas,$gp,$alineacion:auto)
   display: grid
   @if $diferentes == true
     grid-template-columns: $columnas
@@ -34,3 +34,22 @@
   background : $degradado-principal
   -webkit-text-fill-color: transparent
   background-clip: text
+
+@mixin transition($time)
+  @if $time == 0.3
+    transition: 0.3s all ease
+  @else if $time == 0.5
+    transition: 0.5s all ease
+  @else if $time == 1
+    transition: 1s all ease
+
+@mixin efecto-entrada()
+  0%
+    transform: translateY(100%)
+    opacity: 0
+
+  100%
+    transform: translateY(0)
+    opacity: 1
+
+

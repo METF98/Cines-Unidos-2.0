@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+  <!------------Barra Navegacion---------->
   <nav>
+    <!-------Logo y Nombre------->
     <div class="izquierda-nav">
       <a href="">
         <img class="logo" src="https://www.cinesunidos.com/logo/logo.png"  alt="">
@@ -19,48 +21,60 @@
         <P>Puerto La Cruz</P>
       </div>
     </div>
+    <!------Enlaces Centrales---->
     <div class="centro-nav">
       <div class="enlaces-centrales">
-        <a href="">
+        <a  class="fondo-redondo" href="">
+          <i class="fa-solid fa-house"></i>
+          <p>Inicio</p>
+        </a>
+        <a class="fondo-redondo"  href="">
+          <i class="fa-solid fa-film"></i>
           <p>Cartelera</p>
         </a>
-        <a href="">
+        <a class="fondo-redondo" href="">
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Cines</p>
+        </a>
+        <a class="fondo-redondo" href="">
+          <i class="fa-solid fa-tags"></i>
           <p>Promociones</p>
         </a>
-        <a href="">
+        <a class="fondo-redondo" href="">
+          <i class="fa-solid fa-calendar"></i>
           <p>Preventa</p>
         </a>
-        <a href="">
+        <a class="fondo-redondo" href="">
+          <i class="fa-solid fa-bowl-food"></i>
           <p>Comestibles</p>
         </a>
-        <a href="">
+        <a class="fondo-redondo" href="">
+          <i class="fa-solid fa-clapperboard"></i>
           <p>Extrenos</p>
         </a>
-        <select >
-          <option disabled selected>Mas</option>
-          <option>
-            <a href="">
-              <p>Cines</p>
-            </a>
-          </option>
-          <option>
-            <a href="">
-              <p>Club</p>
-            </a>
-          </option>
-          <option>
-            <a href="">
-              <p>Comercio</p>
-            </a>
-          </option>
-          <option>
-            <a href="">
-              <p>Contacto</p>
-            </a>
-          </option>
-        </select>
+        <div class="fondo-redondo">
+          <a class="" href="">
+            <p>Más</p>
+            <i class="fa-solid fa-chevron-down"></i>
+          </a>
+          <div class="popup-nav">
+              <a class="fondo-rectangular" href="">
+                <i class="fa-solid fa-user-group"></i>
+                <p>Club</p>
+              </a>
+              <a class="fondo-rectangular" href="">
+                <i class="fa-solid fa-briefcase"></i>
+                <p>Comercio</p>
+              </a>
+              <a class="fondo-rectangular" href="">
+                <i class="fa-solid fa-phone"></i>
+                <p>Contacto</p>
+              </a>
+            </div>
+        </div>
       </div>
     </div>
+    <!--Inicio de Sesion y Menu desplegable-->
     <div class="derecha-nav">
       <button class="btn-inicio-sesion">
         <i class="fa-solid fa-right-to-bracket"></i>
@@ -71,13 +85,17 @@
       </div>
     </div>
   </nav>
+  <!----------- Contenido Principal--------------->
   <main>
+  <!----------- Header ----------------->
     <header>
       <div class="container-header">
+        <!--Imagenes de fondo header-->
         <div class="fondo-header">
           <img class="banner-header-responsive" src="https://cdn-blog.joinnus.com/wp-content/uploads/2025/05/05182749/portada-destino-final-lazos-de-sangre-estreno-en-cines.jpg" alt="" >
           <img class="banner-header" src="https://stcinesunidoswebshared.blob.core.windows.net/sliders/HO00005476.jpg" alt="">
         </div>
+        <!----Contenedor Central------>
         <div class="texto-header">
           <div class="container-texto">
             <div class="pelicula-destacada">
@@ -107,8 +125,87 @@
             </div>
           </div>
         </div>
+        <!---------Paginador--------->
+        <div class="paginas-header">
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+        </div>
       </div>
     </header>
+    <!-------------- Cartelera ------------->
+    <section>
+      <div class="section-titulo">
+        <h2>Cartelera</h2>
+        <button>
+          <i class="fa-solid fa-plus"></i>
+          <p>Ver mas</p>
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+      <div class="section-cards">
+        <div>
+          <div>
+            <img src="./img/Bailarina-poster.jpg" alt="">
+          </div>
+          <div>
+            <h3>Bailarina</h3>
+            <p>Accion, Drama</p>
+            <p><i class="fa-solid fa-clock"></i> 109 min</p>
+            <div>
+              <i class="fa-solid fa-calendar-check"></i>
+              <p>Horarios</p>
+            </div>
+            <div>
+              <button>14:30</button>
+              <button>17:00</button>
+              <button>19:30</button>
+              <button>22:00</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="./img/Bailarina-poster.jpg" alt="">
+          </div>
+          <div>
+            <h3>Bailarina</h3>
+            <p>Accion, Drama</p>
+            <p><i class="fa-solid fa-clock"></i> 109 min</p>
+            <div>
+              <i class="fa-solid fa-calendar-check"></i>
+              <p>Horarios</p>
+            </div>
+            <div>
+              <button>14:30</button>
+              <button>17:00</button>
+              <button>19:30</button>
+              <button>22:00</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div>
+            <img src="./img/Bailarina-poster.jpg" alt="">
+          </div>
+          <div>
+            <h3>Bailarina</h3>
+            <p>Accion, Drama</p>
+            <p><i class="fa-solid fa-clock"></i> 109 min</p>
+            <div>
+              <i class="fa-solid fa-calendar-check"></i>
+              <p>Horarios</p>
+            </div>
+            <div>
+              <button>14:30</button>
+              <button>17:00</button>
+              <button>19:30</button>
+              <button>22:00</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </body>
 </html>

@@ -8,7 +8,7 @@ $texto:rgb(248, 250, 252)
 $texto-alternativo: rgb(148, 163, 184)
 $subtitle:rgba(209, 213,219,0.90)
 $cartas:rgb(35, 29, 26)
-$borde:rgb(68, 62, 59)
+$borde:rgba(255, 255, 255,0.3)
 $filter-blur: 12px
 $color-alternativo: black
 $color-fondo: brow
@@ -16,107 +16,15 @@ $color-fondo: brow
 *
   margin: 0
   padding: 0
-  font-family: "Arvo", serif
+  font-family: "Inter", sans-serif
 
 body
   background: $background
   cursor: default
-  main
-    @include flex(column,center,center,20px)
-    header
-      @include flex(row,center,center,0)
-      position: relative
-      width: 100%
-      height: 530px
-      min-height: 530px
-      border-color: $borde
-      border-radius: 16px
-      .container-header
-        height: 100%
-        @include flex(null,row,left,center,0)
-        .fondo-header
-          position: absolute
-          top: 0
-          left: 0
-          right: 0
-          bottom: 0
-          .banner-header
-            display: none
-            @include img-position()
-            width: 100%
-            height: 100%
-            max-width: 100%
-            border-radius: 16px
-            filter: brightness(0.3)
-          .banner-header-responsive
-            @include img-position()
-            width: 100%
-            height: 100%
-            max-width: 100%
-            aspect-ratio: 1080/1350
-            border-radius: 16px
-            filter: brightness(0.15)
-        .texto-header
-          height: 90%
-          position: relative
-          z-index: 10
-          @include flex(null,column,start,start,0)
-          @include espaciado(20px,0)
-          .container-texto
-            height: 100%
-            @include flex(null,column,space-around,start,0)
-            .pelicula-destacada
-              @include flex(null,row,center,center,10px)
-              color:$color-principal
-              h3
-                font-size: 14px
-              i
-                @include espaciado(0 0 3px 0,0)
-                font-size: 16px
-            .title-header
-              @include flex(null,column,center,start,50px)
-              .fondo-transparente
-                backdrop-filter: blur(5px)
-                background: $degradado-secundario
-                box-shadow: 0 0 30px 0 rgb(0, 0, 0)
-                @include espaciado(20px,0)
-                border-radius: 30px
-                img
-                  object-fit: contain
-                  width: 250px
-              p
-                font-size: 18px
-                color: $subtitle
-                text-wrap: balance
-              .detalles-destacado
-                @include flex(null,row,left,center,40px)
-                color: $subtitle
-              .detalles-destacado > div
-                @include espaciado (5px 15px,0)
-                border-radius: 30px
-                background: $degradado-secundario
-                color: $color-principal
-              small
-                font-size: 14px
-            .botones-header
-              @include flex(null,row,start,center,30px)
-              button
-                @include flex(null,row,center,center,10px)
-                @include espaciado(15px 32px,0)
-                border-radius: 10px
-                font-size: 14px
-                color: $subtitle
-                background: $background-button
-                border: none
-                i
-                  font-size: 18px
-                &:hover
-                  filter: brightness(1.5)
-                  cursor: pointer
-            & button:nth-child(1)
-              background: $degradado-principal
-            & button:nth-child(2)
-              backdrop-filter: blur(15px)
+  height: 200vh
+main
+  @include flex(column,center,center,20px)
+
 
 
 
