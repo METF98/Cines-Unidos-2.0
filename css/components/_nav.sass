@@ -2,7 +2,7 @@ nav
   @include flex(null,row,space-between,center,null)
   @include espaciado(0 24px,0)
   background: $background-button
-  backdrop-filter: blur($filter-blur)
+  backdrop-filter: blur(12px)
   position: sticky
   top: 0
   z-index: 99
@@ -101,7 +101,7 @@ nav
   @include transition(0.3)
   &:hover
     background: $color-secundario
-    color: #e09caa
+    color: $texto
     .popup-nav
         visibility: visible
         opacity: 1

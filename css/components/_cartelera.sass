@@ -1,6 +1,8 @@
 section
   @include flex(null,column,center,center,20px)
-  @include espaciado(20px,0)
+  @include espaciado(24px,0)
+  a
+    text-decoration: none
   .section-titulo
     width: 100%
     @include flex(null,row,space-between,center,0)
@@ -12,9 +14,102 @@ section
       background: rgba(0,0 ,0,0)
       border: none
       color: $color-principal
+      @include transition(0.3)
+      &:hover
+        background: $color-secundario
+        color: $texto
   .section-cards
     @include grid(false,1,25px,center)
-    div
+    width: 100%
+    .card
+      width: 100%
       color: $texto-alternativo
-      h3
-        color: $texto
+      border-radius: 15px
+      overflow: hidden
+      border: 1px solid $borde-cartas
+      @include transition(0.3)
+      .card-img
+        background: $background-cartas
+        position: relative
+        width: 100%
+        img
+          object-fit: cover
+          object-position: center
+          width: 100%
+          max-width: 100%
+        video
+          visibility: hidden
+          opacity: 0
+          position: absolute
+          top:0
+          right: 0
+          left: 0
+          bottom: 0
+          object-fit: contain
+          object-position: center
+          width: 100%
+          height: 100%
+          z-index: 999
+      .categoria
+        position: absolute
+        top: 20px
+        right: 20px
+        background: $background-oscuro
+        @include espaciado(5px 10px,0)
+        border-radius: 5px
+        p
+          color: $texto
+          font-size: 12px
+      .trailer
+        position: absolute
+        left: 10px
+        bottom: 10px
+        font-size: 15px
+        @include flex(null,row,left,center,5px)
+        @include espaciado(10px,0)
+        i
+          font-size: 8px
+          color: #ff0000
+        p
+          color: $texto
+          font-weight: 500
+      .card-texto
+        @include espaciado(20px,0)
+        @include flex(null,column,center,start,12px)
+        background: $background-cartas
+        p
+          @include flex(null,row,left,center,10px)
+          font-size: 13px
+        h3
+          color: $texto
+          font-size: 18px
+          @include transition(0.3)
+        div
+          @include flex(null,row,left,center,10px)
+          color: $texto
+          button
+            @include flex(null,column,center,center,16px)
+            @include espaciado(10px 12px,0)
+            color: $texto
+            font-size: 12px
+            border-radius: 10px
+            border: 1px solid $borde-cartas
+            background: $background
+            @include transition(0.3)
+            font-weight: bold
+            &:hover
+              background: $color-principal
+              color: $background
+      &:hover
+        border-color: $color-principal
+        & h3
+          color: $color-principal
+      &:hover
+        .card-img
+          background: #000
+          img
+            visibility: 0
+            opacity: 0
+          video
+            visibility: visible
+            opacity: 1
