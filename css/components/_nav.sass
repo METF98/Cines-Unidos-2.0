@@ -5,7 +5,7 @@ nav
   backdrop-filter: blur(12px)
   position: sticky
   top: 0
-  z-index: 99
+  z-index: 999
   border-bottom: 1px solid $borde
   div
     a
@@ -38,8 +38,10 @@ nav
     a
       color: $texto
       @include flex(null,row,center,center,10px)
+      font-weight: 700
       p
         display: none
+        font-size: 12px
 .fondo-redondo
   .popup-nav
     visibility: hidden
@@ -47,7 +49,7 @@ nav
     position: absolute
     top: 55px
     background: $background
-    width: 250px
+    width: 150px
     border-radius: 10px
     @include espaciado(8px,0)
     @include flex(null,column,center,start,15px)
@@ -64,7 +66,7 @@ nav
         background: $color-secundario
       p
         display: block
-        font-size: 14px
+        font-size: 12px
   &:hover
     .popup-nav
       visibility: visible
@@ -95,10 +97,9 @@ nav
   color: $texto-alternativo
   cursor: pointer
   border-radius: 50%
-  width: 40px
-  height: 40px
   @include flex(null,column,center, center, 0)
   @include transition(0.3)
+  @include espaciado(10px,0)
   &:hover
     background: $color-secundario
     color: $texto

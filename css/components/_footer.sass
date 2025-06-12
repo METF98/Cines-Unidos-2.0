@@ -1,0 +1,22 @@
+footer
+  @include flex(null,column,center,center,20px)
+  @include espaciado(24px,0)
+  color: $texto-alternativo
+  background:  $background-cartas
+  .footer-container
+    @include flex(null,column,center,start,20px)
+    .footer-apartado
+      @include flex(null,column,center,start,10px)
+    .footer-logo
+      @include flex(null,row,left,center,5px)
+      img
+        width: 50px
+      div
+        @include flex(null,column,center,start,0)
+        h3
+          @include degradado-principal()
+        h4
+          color: $texto
+
+
+

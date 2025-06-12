@@ -4,6 +4,8 @@
     .texto-nav
       p
         display: block
+
+
   .derecha-nav
     .btn-inicio-sesion
       @include flex(null,row,center,center,8px)
@@ -20,22 +22,12 @@
             @include flex(null,row,left,center,10px)
             font-size: 13px
           h3
-            color: $texto
-            font-size: 18px
             @include transition(0.3)
           .botones
             @include grid(false,3,5px,center)
 
-
-
 @media only screen and (min-width: 768px)
 
-  .container-header
-    .fondo-header
-      .banner-header
-        display: block
-      .banner-header-responsive
-        display: none
   .centro-nav
     display: block
     .enlaces-centrales
@@ -46,6 +38,15 @@
     .fondo-redondo
       display: none
 
+  .container-header
+    .fondo-header
+      .banner-header
+        display: block
+      .banner-header-responsive
+        display: none
+    .texto-header
+      @include espaciado(50px,0)
+
   section
     .section-cards
       @include grid(false,3,25px,center)
@@ -54,7 +55,19 @@
     .section-cards
       @include grid(false,4,25px,center)
 
+
 @media only screen and (min-width: 1200px)
   section
     .section-cards
       @include grid(false,5,25px,center)
+
+  .centro-nav
+    .enlaces-centrales
+      @include flex(null,row,space-between,center,5px)
+      font
+      a
+        @include flex(null,row,center,center,10px)
+        p
+          display: block
+      .fondo-redondo
+        border-radius: 50px
