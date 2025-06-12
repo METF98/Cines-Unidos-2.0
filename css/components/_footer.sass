@@ -3,20 +3,101 @@ footer
   @include espaciado(24px,0)
   color: $texto-alternativo
   background:  $background-cartas
-  .footer-container
-    @include flex(null,column,center,start,20px)
-    .footer-apartado
-      @include flex(null,column,center,start,10px)
-    .footer-logo
-      @include flex(null,row,left,center,5px)
-      img
-        width: 50px
-      div
-        @include flex(null,column,center,start,0)
-        h3
-          @include degradado-principal()
-        h4
-          color: $texto
+  border-top: 1px solid $borde-cartas
+  a
+    text-decoration: none
+    color: $texto-alternativo
+  
 
+  .footer-container
+    @include grid(false,1,20px,center)
+    border-bottom: 1px solid $borde-cartas
+    @include espaciado(0 0 40px 0, 0)
+    &:nth-child(2)
+      width: 100%
+    &:nth-child(3)
+      border-bottom: none
+    .footer-apartado
+      @include flex(null,column,center,start,18px)
+      h4
+        color: $texto
+      p,a
+        font-size: 14px
+      .footer-logo
+        @include flex(null,row,left,center,10px)
+        img
+          width: 50px
+        div
+          @include flex(null,column,center,start,0)
+          h3
+            @include degradado-principal()
+            font-family: "Arvo", serif
+            font-size: 20px
+          p
+            font-family: "Arvo", serif
+            font-size: 14px
+      .footer-app
+        @include flex(null,row,left,center,10px)
+        button
+          @include flex(null,row,center,center,10px)
+          @include espaciado(12px,0)
+          color: $texto
+          font-size: 14px
+          border-radius: 10px
+          border: 1px solid $borde-cartas
+          background: $background
+          @include transition(0.3)
+          font-weight: bold
+          i
+            font-size: 16px
+          &:hover
+            border: 1px solid $color-principal
+            background: $color-secundario
+            cursor: pointer
+    .footer-club
+      @include flex(null,column,center,start,20px)
+      @include espaciado(24px,0)
+      border-radius: 10px
+      font-size: 14px
+      color: $subtitle
+      background: $degradado-principal
+      color: $texto
+      div
+        @include flex(null,row,center,center,10px)
+        .fondo-transparente
+          @include flex(null,column,center,center,0)
+          @include espaciado(12px 20px,0)
+          backdrop-filter:blur(15px)
+          background: #ffffff1e
+          border-radius: 50px
+          span
+            font-size: 20px
+            font-weight: bold
+
+        p
+          font-size: 25px
+          font-weight: bold
+      p
+        font-size: 16px
+        font-weight: 400
+      button
+        border: none
+        background: $texto
+        color:$color-principal
+        @include espaciado(16px,0)
+        border-radius: 10px
+        font-weight: 500
+        &:hover
+          opacity: 0.95
+          cursor: pointer
+    .footer-redes
+      @include flex(null,row,center,center,15px)
+      font-size: 14px
+      div
+        @include flex(null,row,center,center,20px)
+        a
+          
+    .footer-details
+      @include flex(null,column,center,center,5px)
 
 
