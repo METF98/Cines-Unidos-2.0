@@ -844,6 +844,10 @@ footer .footer-container .footer-redes div {
   align-items: center;
   gap: 20px;
 }
+footer .footer-container .footer-redes div a {
+  color: rgb(248, 250, 252);
+  font-size: 16px;
+}
 footer .footer-container .footer-details {
   display: flex;
   flex-direction: column;
