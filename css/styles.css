@@ -4,6 +4,11 @@
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -moz-window-dragging: none;
+  -moz-user-select: none;
 }
 
 body {
@@ -290,8 +295,10 @@ header {
   background-size: 800%;
 }
 .container-header .texto-header .container-texto .title-header .fondo-transparente img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: position;
+     object-fit: position;
+  -o-object-position: center;
+     object-position: center;
   width: 250px;
 }
 .container-header .texto-header .container-texto .title-header p {
@@ -685,6 +692,7 @@ footer a {
   color: rgb(148, 163, 184);
 }
 footer .footer-container {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 20px;
@@ -693,11 +701,10 @@ footer .footer-container {
   padding: 0 0 40px 0;
   margin: 0;
 }
-footer .footer-container:nth-child(2) {
-  width: 100%;
-}
 footer .footer-container:nth-child(3) {
   border-bottom: none;
+  padding: 0;
+  margin: 0;
 }
 footer .footer-container .footer-apartado {
   display: flex;
@@ -711,6 +718,10 @@ footer .footer-container .footer-apartado h4 {
 }
 footer .footer-container .footer-apartado p, footer .footer-container .footer-apartado a {
   font-size: 14px;
+  transition: 0.3s all ease;
+}
+footer .footer-container .footer-apartado a:hover {
+  color: rgb(241, 86, 39);
 }
 footer .footer-container .footer-apartado .footer-logo {
   display: flex;
@@ -824,9 +835,10 @@ footer .footer-container .footer-club button {
   margin: 0;
   border-radius: 10px;
   font-weight: 500;
+  transition: 0.3s all ease;
 }
 footer .footer-container .footer-club button:hover {
-  opacity: 0.95;
+  opacity: 0.85;
   cursor: pointer;
 }
 footer .footer-container .footer-redes {
@@ -847,6 +859,13 @@ footer .footer-container .footer-redes div {
 footer .footer-container .footer-redes div a {
   color: rgb(248, 250, 252);
   font-size: 16px;
+  padding: 10px 15px;
+  margin: 0;
+  border-radius: 50px;
+  transition: 0.3s all ease;
+}
+footer .footer-container .footer-redes div a:hover {
+  background: rgb(53, 45, 41);
 }
 footer .footer-container .footer-details {
   display: flex;
@@ -854,6 +873,10 @@ footer .footer-container .footer-details {
   justify-content: center;
   align-items: center;
   gap: 5px;
+  text-align: center;
+}
+footer .footer-container .footer-details p {
+  font-size: 14px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -927,6 +950,41 @@ footer .footer-container .footer-details {
     gap: 25px;
     align-items: center;
   }
+  footer .footer-container:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: center;
+  }
+  footer .footer-container:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  footer .footer-container .footer-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+  footer .footer-container .footer-redes div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+  footer .footer-container .footer-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    align-items: end;
+    gap: 5px;
+    text-align: right;
+  }
 }
 @media only screen and (min-width: 992px) {
   section .section-cards {
@@ -934,6 +992,22 @@ footer .footer-container .footer-details {
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     align-items: center;
+  }
+  footer .footer-container {
+    padding: 0 0 30px 0;
+    margin: 0;
+  }
+  footer .footer-container:nth-child(1) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    align-items: center;
+  }
+  footer .footer-container:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    align-items: start;
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -962,5 +1036,12 @@ footer .footer-container .footer-details {
   }
   .centro-nav .enlaces-centrales .fondo-redondo {
     border-radius: 50px;
+  }
+  footer .footer-container .footer-club {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
 }/*# sourceMappingURL=styles.css.map */

@@ -16,14 +16,14 @@ header
     bottom: 0
     .banner-header
       display: none
-      @include img-position()
+      @include img_position(cover)
       width: 100%
       height: 100%
       max-width: 100%
       border-radius: 0 0 16px 16px
       filter: brightness(0.3)
     .banner-header-responsive
-      @include img-position()
+      @include img_position(cover)
       width: 100%
       height: 100%
       max-width: 100%
@@ -61,7 +61,7 @@ header
           animation: brillo 3.5s infinite linear
           background-size: 800%
           img
-            object-fit: contain
+            @include img_position(position)
             width: 250px
         p
           font-size: 18px

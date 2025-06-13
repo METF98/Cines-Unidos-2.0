@@ -1,15 +1,11 @@
 @media only screen and (min-width: 600px)
-
   .izquierda-nav
     .texto-nav
       p
         display: block
-
-
   .derecha-nav
     .btn-inicio-sesion
       @include flex(null,row,center,center,8px)
-
   section
     .section-cards
       @include grid(false,2,25px,center)
@@ -27,17 +23,14 @@
             @include grid(false,3,5px,center)
 
 @media only screen and (min-width: 768px)
-
   .centro-nav
     display: block
     .enlaces-centrales
       .fondo-redondo:hover
         background: $color-secundario
-
   .derecha-nav
     .fondo-redondo
       display: none
-
   .container-header
     .fondo-header
       .banner-header
@@ -46,14 +39,35 @@
         display: none
     .texto-header
       @include espaciado(50px,0)
-
   section
     .section-cards
       @include grid(false,3,25px,center)
+  footer
+    .footer-container
+      &:nth-child(1)
+        @include grid(false,2,30px,center)
+      &:nth-child(3)
+        @include flex(null,row,space-between,center,10px)
+      .footer-redes
+        @include flex(null,row,center,center,5px)
+        div
+          @include flex(null,row,center,center,0px)
+      .footer-details
+        @include flex(null,column,right,end,5px)
+        text-align: right
+
+
 @media only screen and (min-width: 992px)
   section
     .section-cards
       @include grid(false,4,25px,center)
+  footer
+    .footer-container
+      @include espaciado(0 0 30px 0, 0)
+      &:nth-child(1)
+        @include grid(false,4,20px,center)
+      &:nth-child(2)
+        @include grid(false,2,30px,start)
 
 
 @media only screen and (min-width: 1200px)
@@ -64,10 +78,13 @@
   .centro-nav
     .enlaces-centrales
       @include flex(null,row,space-between,center,5px)
-      font
       a
         @include flex(null,row,center,center,10px)
         p
           display: block
       .fondo-redondo
         border-radius: 50px
+  footer
+    .footer-container
+      .footer-club
+        @include flex(null,column,center,center,20px)

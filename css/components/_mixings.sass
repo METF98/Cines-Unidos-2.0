@@ -26,8 +26,8 @@
   padding: $padding
   margin: $margin
 
-@mixin img-position()
-  object-fit: cover
+@mixin img_position($position)
+  object-fit: $position
   object-position: center
 
 @mixin degradado-principal()
@@ -42,14 +42,4 @@
     transition: 0.5s all ease
   @else if $time == 1
     transition: 1s all ease
-
-@mixin efecto-entrada()
-  0%
-    transform: translateY(100%)
-    opacity: 0
-
-  100%
-    transform: translateY(0)
-    opacity: 1
-
 

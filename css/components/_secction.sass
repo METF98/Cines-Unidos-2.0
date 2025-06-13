@@ -33,8 +33,7 @@ section
         position: relative
         width: 100%
         img
-          object-fit: cover
-          object-position: center
+          @include img_position(cover)
           width: 100%
           max-width: 100%
           @include transition(1)
@@ -46,8 +45,7 @@ section
           right: 0
           left: 0
           bottom: 0
-          object-fit: contain
-          object-position: center
+          @include img_position(contain)
           width: 100%
           height: 100%
           z-index: 10
